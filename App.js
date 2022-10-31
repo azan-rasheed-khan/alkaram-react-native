@@ -14,6 +14,7 @@ import {
 import Header from './src/modules/header/Header';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginScreen from './src/modules/login/Login';
 
 function HomeScreen({navigation}) {
   return (
@@ -60,10 +61,21 @@ const App = () => {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator screenOptions={{
+          title: 'Login',
+          headerShown : true,
+          headerStyle: {
+            backgroundColor: 'orange',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} initialRouteName="Login">
         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }}/>
         <Stack.Screen name='Header' component={Header} />
         <Stack.Screen name='Details' component={DetailsScreen} />
+        <Stack.Screen name='Login' component={LoginScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
