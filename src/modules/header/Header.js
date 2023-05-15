@@ -13,9 +13,11 @@ import {
 
 const Header = () => {
     return(
-        <Text>
-            huda
-        </Text>
+        <View>
+            <Text>
+                huda
+            </Text>
+        </View>
     )
 }
 
