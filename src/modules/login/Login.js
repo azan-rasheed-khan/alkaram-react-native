@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { 
     ScrollView,
     View ,
@@ -14,8 +14,15 @@ import { useHeaderHeight } from '@react-navigation/elements'
 
 
 const LoginScreen = ({navigation}) => {
+    const [email,setEmail] = useState(null)
+    const [password,setPassword] = useState(null)
     const onPressLearnMore = () => {
-        navigation.navigate('Home')
+        if (email && password) {
+            navigation.navigate('Home')
+        } else {
+            // console.log(email,password)
+            alert('Please enter email and password')
+        }
     }
     const AppButton = ({ onPress, title }) => (
         <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
@@ -37,12 +44,19 @@ const LoginScreen = ({navigation}) => {
                 <Text style={styles.loginDesc} >
                     Please Sign In To Continue
                 </Text>
-                <TextInput placeholder="Enter Your Email" style={styles.inputField} />
+                <TextInput value={email ? email : ''} onChangeText={(e)=>{
+                    setEmail(e)
+                }} placeholder="Enter Your Email" style={styles.inputField} />
                 <TextInput 
                     placeholder="Enter Your Password" 
                     style={[styles.inputField,{
                         marginTop : 30
                     }]} 
+                    value={password ? password : ''}
+                    secureTextEntry
+                    onChangeText={(e)=>{
+                        setPassword(e)
+                    }}
                 />
                 <AppButton title="Login " onPress={onPressLearnMore} />
             </ScrollView>
