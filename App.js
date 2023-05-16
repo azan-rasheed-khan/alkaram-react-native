@@ -61,7 +61,8 @@ const App = () => {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{
+      <Stack.Navigator 
+        screenOptions={{
           title: 'Login',
           headerShown : true,
           headerStyle: {
@@ -71,7 +72,8 @@ const App = () => {
           headerTitleStyle: {
             fontWeight: 'bold',
           },
-        }} initialRouteName="Login">
+        }} 
+        initialRouteName="Login">
         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }}/>
         <Stack.Screen name='Header' component={Header} />
         <Stack.Screen name='Details' component={DetailsScreen} />
