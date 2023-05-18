@@ -15,6 +15,7 @@ import Header from './src/modules/header/Header';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './src/modules/login/Login';
+import SignUp from './src/modules/SignUp/SignUp';
 
 function HomeScreen({navigation}) {
   return (
@@ -78,6 +79,7 @@ const App = () => {
         <Stack.Screen name='Header' component={Header} />
         <Stack.Screen name='Details' component={DetailsScreen} />
         <Stack.Screen name='Login' component={LoginScreen}/>
+        <Stack.Screen name='SignUp' component={SignUp} />
       </Stack.Navigator>
     </NavigationContainer>
   )
