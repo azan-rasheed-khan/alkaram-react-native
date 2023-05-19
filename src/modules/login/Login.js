@@ -63,8 +63,8 @@ const LoginScreen = ({navigation}) => {
                 /> */}
                 <TouchableOpacity onPress={()=>{
                     navigation.navigate('SignUp')
-                }} style={styles.appButtonContainer}>
-                    <Text style={styles.appButtonText}>Don't have an account? Sign Up</Text>
+                }} style={styles.signUpBtn}>
+                    <Text style={styles.signUpBtnText}>Don't have an account? Sign Up</Text>
                 </TouchableOpacity>
             </ScrollView>
         </KeyboardAvoidingView>
@@ -124,6 +124,9 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         alignSelf: "center",
         textTransform: "uppercase"
+      },
+      signUpBtn : {
+        marginTop  : 10
       }
 })
 
