@@ -11,6 +11,11 @@ import {
 } from "react-native"
 import { useHeaderHeight } from '@react-navigation/elements'
 
+export const AppButton = ({ onPress, title }) => (
+    <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
+      <Text style={styles.appButtonText}>{title}</Text>
+    </TouchableOpacity>
+  );
 
 
 const LoginScreen = ({navigation}) => {
@@ -24,11 +29,7 @@ const LoginScreen = ({navigation}) => {
             alert('Please enter email and password')
         }
     }
-    const AppButton = ({ onPress, title }) => (
-        <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
-          <Text style={styles.appButtonText}>{title}</Text>
-        </TouchableOpacity>
-      );
+   
       const height = useHeaderHeight()
     return(
         <>
