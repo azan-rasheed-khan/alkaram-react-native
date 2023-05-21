@@ -79,7 +79,7 @@ const App = () => {
         <Stack.Screen name='Header' component={Header} />
         <Stack.Screen name='Details' component={DetailsScreen} />
         <Stack.Screen name='Login' component={LoginScreen}/>
-        <Stack.Screen name='SignUp' component={SignUp} />
+        <Stack.Screen name='SignUp' component={SignUp} options={{title : 'Sign Up'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

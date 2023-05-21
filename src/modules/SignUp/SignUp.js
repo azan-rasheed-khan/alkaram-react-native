@@ -1,4 +1,4 @@
-import { KeyboardAvoidingView, ScrollView, StyleSheet } from "react-native"
+import { KeyboardAvoidingView, ScrollView, StyleSheet, Text, View } from "react-native"
 import React, { useState } from "react"
 
 
@@ -14,6 +14,11 @@ const SignUp = () => {
             keyboardVerticalOffset={64}
         >
             <ScrollView style={styles.signUpParent}>
+                <View>
+                    <Text>
+                        Sign Up Form
+                    </Text>
+                </View>
 
             </ScrollView>
         </KeyboardAvoidingView>
