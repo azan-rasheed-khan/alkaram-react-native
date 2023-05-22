@@ -7,17 +7,21 @@ import { AppButton } from "../login/Login"
 
 
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
     const [email,setEmail] = useState(null)
     const [name,setName] = useState(null)
     const [conPasword,setConPassword] = useState(null)
     const [password,setPassword] = useState(null)  
     const onPressLearnMore = () => {
-        if (email && password) {
-            navigation.navigate('Home')
+        if (email && password && conPasword && name) {
+            if (password === conPasword) {
+                navigation.navigate('Home')
+            } else {
+                alert ('your password does not match')
+            }
         } else {
             // console.log(email,password)
-            alert('Please enter email and password')
+            alert('Please enter all information')
         }
     }
     return (
@@ -41,16 +45,28 @@ const SignUp = () => {
                 }} placeholder="Enter Your Email" style={styles.inputField} />
                 <TextInput 
                     placeholder="Enter Your Password" 
-                    style={[styles.inputField]} 
+                    style={[styles.inputField,{
+                        borderWidth : 1,
+                        borderColor : conPasword === password ? 'green' : 'red'
+                    }]}
                     value={password ? password : ''}
                     secureTextEntry
                     onChangeText={(e)=>{
                         setPassword(e)
                     }}
                 />
-                <TextInput value={conPasword ? conPasword : ''} onChangeText={(e)=>{
+                <TextInput 
+                    value={conPasword ? conPasword : ''} 
+                    onChangeText={(e)=>{
                     setConPassword(e)
-                }} placeholder="Confirm Your Password" secureTextEntry style={styles.inputField} />
+                }} 
+                    placeholder="Confirm Your Password" 
+                    secureTextEntry 
+                    style={[styles.inputField,{
+                        borderWidth : 1,
+                        borderColor : conPasword === password ? 'green' : 'red'
+                    }]}
+                />
                 <AppButton title="SignUp " onPress={onPressLearnMore} />
 
             </ScrollView>
