@@ -47,7 +47,7 @@ const SignUp = ({navigation}) => {
                     placeholder="Enter Your Password" 
                     style={[styles.inputField,{
                         borderWidth : 1,
-                        borderColor : conPasword === password ? 'green' : 'red'
+                        borderColor : conPasword && password && conPasword === password ? 'green' : 'red'
                     }]}
                     value={password ? password : ''}
                     secureTextEntry
@@ -64,7 +64,7 @@ const SignUp = ({navigation}) => {
                     secureTextEntry 
                     style={[styles.inputField,{
                         borderWidth : 1,
-                        borderColor : conPasword === password ? 'green' : 'red'
+                        borderColor : conPasword && password && conPasword === password ? 'green' : 'red'
                     }]}
                 />
                 <AppButton title="SignUp " onPress={onPressLearnMore} />
