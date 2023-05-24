@@ -20,7 +20,7 @@ const SignUp = ({navigation}) => {
                 alert ('your password does not match')
             }
         } else {
-            // console.log(email,password)
+            console.log(email,password)
             alert('Please enter all information')
         }
     }
