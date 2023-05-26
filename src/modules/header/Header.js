@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     headerDiv : {
         width:'100%',
         height:1000,
-        backgroundColor:"yellow",
+        backgroundColor:"green",
   }
   });
 
