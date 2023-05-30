@@ -17,6 +17,7 @@ export default Footer
 
 const styles = StyleSheet.create({
     container : {
-        height : 50
+        height : 50,
+        flexGrow : 1
     }
 })
