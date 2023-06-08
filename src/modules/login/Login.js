@@ -10,6 +10,8 @@ import {
     TouchableOpacity
 } from "react-native"
 import { useHeaderHeight } from '@react-navigation/elements'
+import { useSelector } from "react-redux";
+import { GlobalStatesData } from "../../Redux/slices/globalStatesSlice";
 
 export const AppButton = ({ onPress, title }) => (
     <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
@@ -21,6 +23,7 @@ export const AppButton = ({ onPress, title }) => (
 const LoginScreen = ({navigation}) => {
     const [email,setEmail] = useState(null)
     const [password,setPassword] = useState(null)
+    const globalState = useSelector(GlobalStatesData)
     const onPressLearnMore = () => {
         if (email && password) {
             navigation.navigate('Home')
@@ -30,7 +33,8 @@ const LoginScreen = ({navigation}) => {
         }
     }
    
-      const height = useHeaderHeight()
+    const height = useHeaderHeight()
+    console.log(globalState?.globalStatesSlice?.openState)
     return(
         <>
         <KeyboardAvoidingView

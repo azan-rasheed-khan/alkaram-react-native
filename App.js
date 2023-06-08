@@ -16,6 +16,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './src/modules/login/Login';
 import SignUp from './src/modules/SignUp/SignUp';
+import { Provider } from 'react-redux';
+import store from './src/Redux/store';
 
 function HomeScreen({navigation}) {
   return (
@@ -61,27 +63,29 @@ function DetailsScreen({ navigation }) {
 const App = () => {
   const Stack = createNativeStackNavigator();
   return (
-    <NavigationContainer>
-      <Stack.Navigator 
-        screenOptions={{
-          title: 'Login',
-          headerShown : true,
-          headerStyle: {
-            backgroundColor: 'orange',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }} 
-        initialRouteName="Login">
-        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }}/>
-        <Stack.Screen name='Header' component={Header} />
-        <Stack.Screen name='Details' component={DetailsScreen} />
-        <Stack.Screen name='Login' component={LoginScreen}/>
-        <Stack.Screen name='SignUp' component={SignUp} options={{title : 'Sign Up'}}/>
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator 
+          screenOptions={{
+            title: 'Login',
+            headerShown : true,
+            headerStyle: {
+              backgroundColor: 'orange',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }} 
+          initialRouteName="Login">
+          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }}/>
+          <Stack.Screen name='Header' component={Header} />
+          <Stack.Screen name='Details' component={DetailsScreen} />
+          <Stack.Screen name='Login' component={LoginScreen}/>
+          <Stack.Screen name='SignUp' component={SignUp} options={{title : 'Sign Up'}}/>
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   )
 };
 
