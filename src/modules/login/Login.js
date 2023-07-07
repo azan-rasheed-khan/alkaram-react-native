@@ -64,8 +64,8 @@ const LoginScreen = ({navigation}) => {
                     }}
                 />
                 <AppButton title="Login " onPress={onPressLearnMore} />
-                {/* <AppButton title="Don't have an account? Sign Up" 
-                /> */}
+                <AppButton title="Don't have an account? Sign Up" 
+                />
                 <TouchableOpacity onPress={()=>{
                     navigation.navigate('SignUp')
                 }} style={styles.signUpBtn}>
