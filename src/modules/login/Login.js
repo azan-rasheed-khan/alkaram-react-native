@@ -28,7 +28,7 @@ const LoginScreen = ({navigation}) => {
         if (email && password) {
             navigation.navigate('Home')
         } else {
-            // console.log(email,password)
+            console.log(email,password)
             alert('Please enter email and password')
         }
     }
