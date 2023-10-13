@@ -17,6 +17,9 @@ const NavBar = () => {
             <Text>
                 huda
             </Text>
+            <Text>
+                huda
+            </Text>
         </View>
     )
 }
