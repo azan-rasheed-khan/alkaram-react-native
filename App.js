@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -18,6 +18,7 @@ import LoginScreen from './src/modules/login/Login';
 import SignUp from './src/modules/SignUp/SignUp';
 import { Provider } from 'react-redux';
 import store from './src/Redux/store';
+import SplashScreen from 'react-native-splash-screen';
 
 function HomeScreen({navigation}) {
   return (
@@ -62,6 +63,9 @@ function DetailsScreen({ navigation }) {
 
 const App = () => {
   const Stack = createNativeStackNavigator();
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
   return (
     <Provider store={store}>
       <NavigationContainer>
