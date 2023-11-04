@@ -14,12 +14,6 @@ import {
 const NavBar = () => {
     return(
         <View>
-            <Text>
-                huda
-            </Text>
-            <Text>
-                huda
-            </Text>
         </View>
     )
 }
