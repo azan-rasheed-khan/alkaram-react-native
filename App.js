@@ -82,7 +82,7 @@ const App = () => {
             },
           }} 
           initialRouteName="Login">
-          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }}/>
+          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Home' }}/>
           <Stack.Screen name='Header' component={Header} />
           <Stack.Screen name='Details' component={DetailsScreen} />
           <Stack.Screen name='Login' component={LoginScreen}/>
