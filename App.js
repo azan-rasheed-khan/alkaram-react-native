@@ -64,7 +64,7 @@ function DetailsScreen({ navigation }) {
 const App = () => {
   const Stack = createNativeStackNavigator();
   useEffect(() => {
-    SplashScreen.hide();
+    // SplashScreen.hide();
   }, []);
   return (
     <Provider store={store}>

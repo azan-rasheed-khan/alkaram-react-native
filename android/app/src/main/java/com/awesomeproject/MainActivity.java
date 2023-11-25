@@ -1,4 +1,4 @@
-package com.awesomeproject;
+package com.alkaramstudio;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -34,7 +34,7 @@ public class MainActivity extends ReactActivity {
 
    @Override
     protected void onCreate(Bundle savedInstanceState) {
-        SplashScreen.show(this);  // Add this here
+        // SplashScreen.show(this);  // Add this here
         super.onCreate(savedInstanceState);
     }
 
