@@ -6,9 +6,7 @@ const Footer = () => {
     return (
         <ScrollView>
             <View>
-                <Text>
-                    Azaan
-                </Text>
+                
             </View>
         </ScrollView>
     )

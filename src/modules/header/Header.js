@@ -14,9 +14,6 @@ import {
 const Header = () => {
     return(
         <View>
-            <Text>
-                huda
-            </Text>
         </View>
     )
 }
