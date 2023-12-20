@@ -1,12 +1,10 @@
 import React, { useState } from "react"
 import { 
     ScrollView,
-    View ,
     StyleSheet,
     Text,
     TextInput,
     KeyboardAvoidingView,
-    Button,
     TouchableOpacity
 } from "react-native"
 import { useHeaderHeight } from '@react-navigation/elements'
@@ -78,7 +76,6 @@ const LoginScreen = ({navigation}) => {
 const styles = StyleSheet.create({
     loginParent : {
         flex : 1,
-        // backgroundColor : 'yellow'
         paddingLeft : 30,
     },
     container: {
@@ -100,7 +97,6 @@ const styles = StyleSheet.create({
         height : 45,
         width : 300,
         backgroundColor : 'white',
-        // borderWidth: 1,
         borderRadius : 5,
         padding : 10,
         shadowColor: '#000',
