@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -14,6 +14,9 @@ import {
 const NavBar = () => {
     return(
         <View>
+          <Text>
+            Navbar
+          </Text>
         </View>
     )
 }
