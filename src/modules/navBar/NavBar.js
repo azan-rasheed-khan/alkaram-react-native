@@ -8,28 +8,28 @@ import {
   useColorScheme,
   View,
   Image,
-  TextInput
+  TextInput,
 } from 'react-native';
 
 const NavBar = () => {
-    return(
-        <View>
-          <Text>
-            Navbar
-          </Text>
-        </View>
-    )
-}
+  return (
+    <ScrollView>
+      <View>
+        <Text>Navbar</Text>
+      </View>
+    </ScrollView>
+  );
+};
 
 const styles = StyleSheet.create({
-    headerDiv : {
-        width:'100%',
-        height:1000,
-        backgroundColor:"green",
+  headerDiv: {
+    width: '100%',
+    height: 1000,
+    backgroundColor: 'green',
   },
-  container : {
-    flex : 1
-  }
-  });
+  container: {
+    flex: 1,
+  },
+});
 
-export default NavBar
+export default NavBar;
