@@ -1,13 +1,19 @@
 import React, {useState} from 'react';
 import {
+  ScrollView,
   StyleSheet,
   View,
 } from 'react-native';
 
 const Header = () => {
     return(
+      <ScrollView>
+        
         <View>
+
         </View>
+
+      </ScrollView>
     )
 }
 
