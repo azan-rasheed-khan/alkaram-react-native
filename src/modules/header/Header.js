@@ -8,11 +8,8 @@ import {
 const Header = () => {
     return(
       <ScrollView>
-        
         <View>
-
         </View>
-
       </ScrollView>
     )
 }
