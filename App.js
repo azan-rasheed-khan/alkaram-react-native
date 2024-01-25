@@ -72,7 +72,7 @@ const App = () => {
         <Stack.Navigator 
           screenOptions={{
             title: 'Login',
-            headerShown : true,
+            headerShown : false,
             headerStyle: {
               backgroundColor: 'orange',
             },
