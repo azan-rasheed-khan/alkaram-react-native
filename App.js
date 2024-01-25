@@ -11,11 +11,11 @@ import {
   TextInput,
   Button
 } from 'react-native';
-import Header from './src/modules/header/Header';
+import Header from './src/modules/Ui/header/Header';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginScreen from './src/modules/login/Login';
-import SignUp from './src/modules/SignUp/SignUp';
+import LoginScreen from './src/modules/Ui/login/Login';
+import SignUp from './src/modules/Ui/SignUp/SignUp';
 import { Provider } from 'react-redux';
 import store from './src/Redux/store';
 import SplashScreen from 'react-native-splash-screen';
