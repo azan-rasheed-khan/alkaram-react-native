@@ -20,7 +20,7 @@ export const AppButton = ({onPress, title}) => (
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
-const heightImgFrame = Dimensions.get('window').height * 0.4;
+const heightImgFrame = Dimensions.get('window').height * 0.5;
 const widthImgFrame = Dimensions.get('window').width;
 
 const LoginScreen = ({navigation}) => {
@@ -45,15 +45,12 @@ const LoginScreen = ({navigation}) => {
         style={styles.container}
         keyboardVerticalOffset={64}>
         <ScrollView style={styles.loginParent}>
-          {/* <Text style={styles.loginHeading}>
-                    Login
-                </Text>
-                <Text style={styles.loginDesc} >
-                    Please Sign In To Continue
-                </Text> */}
           <View style={styles.inputLogoFrame}>
             <Image source={logoFrame} />
+            <Text style={styles.loginTextHeading}> Login </Text>
           </View>
+          <View style={styles.loginContentFrame}>
+            
           <TextInput
             value={email ? email : ''}
             onChangeText={e => {
@@ -86,6 +83,7 @@ const LoginScreen = ({navigation}) => {
               Don't have an account? Sign Up
             </Text>
           </TouchableOpacity>
+          </View>
         </ScrollView>
       </KeyboardAvoidingView>
     </>
@@ -98,6 +96,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    backgroundColor : 'white'
   },
   loginHeading: {
     paddingTop: '40%',
@@ -146,11 +145,24 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   inputLogoFrame: {
-    display: 'flex',
+    flex : 1,
     height: heightImgFrame,
     justifyContent: 'center',
     alignItems: 'center',
   },
+  loginContentFrame : {
+    flex : 1,
+    padding : 25
+  },
+  loginTextHeading : {
+    // flex : 1,
+    width : '100%',
+    textAlign : 'center',
+    fontSize : 30,
+    fontWeight : '500',
+    color : 'black',
+    marginTop : 100
+  }
 });
 
 export default LoginScreen;
