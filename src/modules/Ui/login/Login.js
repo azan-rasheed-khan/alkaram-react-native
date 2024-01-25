@@ -12,8 +12,9 @@ import {
 } from 'react-native';
 import {useHeaderHeight} from '@react-navigation/elements';
 import {useSelector} from 'react-redux';
-import {GlobalStatesData} from '../../Redux/slices/globalStatesSlice';
-import logoFrame from '../../../assets/Frame.png';
+import {GlobalStatesData} from '../../../Redux/slices/globalStatesSlice';
+import logoFrame from '../../../../assets/Frame.png';
+import InputField from '../../components/InputField/InputField';
 
 export const AppButton = ({onPress, title}) => (
   <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
@@ -51,13 +52,16 @@ const LoginScreen = ({navigation}) => {
           </View>
           <View style={styles.loginContentFrame}>
             
-          <TextInput
+          {/* <TextInput
             value={email ? email : ''}
             onChangeText={e => {
               setEmail(e);
             }}
             placeholder="Enter Your Email"
             style={styles.inputField}
+          /> */}
+          <InputField 
+          fieldName = 'Mobile Number'
           />
           <TextInput
             placeholder="Enter Your Password"
