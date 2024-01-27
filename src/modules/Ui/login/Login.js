@@ -51,42 +51,29 @@ const LoginScreen = ({navigation}) => {
             <Text style={styles.loginTextHeading}> Login </Text>
           </View>
           <View style={styles.loginContentFrame}>
-            
-          {/* <TextInput
-            value={email ? email : ''}
-            onChangeText={e => {
-              setEmail(e);
-            }}
-            placeholder="Enter Your Email"
-            style={styles.inputField}
-          /> */}
-          <InputField 
-          fieldName = 'Mobile Number'
-          />
-          <TextInput
-            placeholder="Enter Your Password"
-            style={[
-              styles.inputField,
-              {
-                marginTop: 30,
-              },
-            ]}
-            value={password ? password : ''}
-            secureTextEntry
-            onChangeText={e => {
-              setPassword(e);
-            }}
-          />
-          <AppButton title="Login " onPress={onPressLearnMore} />
-          <TouchableOpacity
-            onPress={() => {
-              navigation.navigate('SignUp');
-            }}
-            style={styles.signUpBtn}>
-            <Text style={styles.signUpBtnText}>
-              Don't have an account? Sign Up
-            </Text>
-          </TouchableOpacity>
+            <InputField
+              fieldName="Mobile Number"
+              placeholder="03XX XXXXXXX"
+              textInputStyles={styles.textInputStyles}
+              keyboardType="numeric"
+            />
+            <InputField
+              fieldName="Password"
+              placeholder="XXXX"
+              textInputStyles={styles.textInputStyles}
+              keyboardType="default"
+              secureTextEntry={true}
+            />
+            <AppButton title="Login " onPress={onPressLearnMore} />
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('SignUp');
+              }}
+              style={styles.signUpBtn}>
+              <Text style={styles.signUpBtnText}>
+                Don't have an account? Sign Up
+              </Text>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -100,7 +87,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor : 'white'
+    backgroundColor: 'white',
   },
   loginHeading: {
     paddingTop: '40%',
@@ -149,24 +136,33 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   inputLogoFrame: {
-    flex : 1,
+    flex: 1,
     height: heightImgFrame,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  loginContentFrame : {
-    flex : 1,
-    padding : 25
+  loginContentFrame: {
+    flex: 1,
+    padding: 25,
   },
-  loginTextHeading : {
+  loginTextHeading: {
     // flex : 1,
-    width : '100%',
-    textAlign : 'center',
-    fontSize : 30,
-    fontWeight : '500',
-    color : 'black',
-    marginTop : 100
-  }
+    width: '100%',
+    textAlign: 'center',
+    fontSize: 30,
+    fontWeight: '500',
+    color: 'black',
+    marginTop: 100,
+  },
+  textInputStyles: {
+    backgroundColor: '#F5F5F5',
+    borderRadius: 10,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: '#414042',
+    paddingLeft: 10,
+    marginBottom : 10
+  },
 });
 
 export default LoginScreen;
