@@ -53,7 +53,7 @@ const LoginScreen = ({navigation}) => {
           <View style={styles.loginContentFrame}>
             <InputField
               fieldName="Mobile Number"
-              placeholder="03XX XXXXXXX"
+              placeholder="03XX-XXXXXXX"
               textInputStyles={styles.textInputStyles}
               keyboardType="numeric"
             />
