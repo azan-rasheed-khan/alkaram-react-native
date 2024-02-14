@@ -59,7 +59,7 @@ const LoginScreen = ({navigation}) => {
             />
             <InputField
               fieldName="Password"
-              placeholder="XXXXXX"
+              placeholder="XXXXXXXXX"
               textInputStyles={styles.textInputStyles}
               keyboardType="default"
               secureTextEntry={true}
