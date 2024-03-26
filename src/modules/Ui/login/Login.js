@@ -25,17 +25,21 @@ const heightImgFrame = Dimensions.get('window').height * 0.5;
 const widthImgFrame = Dimensions.get('window').width;
 
 const LoginScreen = ({navigation}) => {
-  const [email, setEmail] = useState(null);
+  const [mobile, setMobile] = useState(null);
   const [password, setPassword] = useState(null);
   const globalState = useSelector(GlobalStatesData);
   const onPressLearnMore = () => {
-    if (email && password) {
+    if (mobile && password) {
       navigation.navigate('Home');
     } else {
       console.log(email, password);
       alert('Please enter email and password');
     }
   };
+
+  const handleChangeText = (inputValue,dispatch) => {
+    dispatch(inputValue)
+  }
 
   const height = useHeaderHeight();
   console.log(globalState?.globalStatesSlice?.openState);
@@ -56,6 +60,8 @@ const LoginScreen = ({navigation}) => {
               placeholder="03XX-XXXXXXX"
               textInputStyles={styles.textInputStyles}
               keyboardType="numeric"
+              value={mobile}
+              onChangeText={handleChangeText(e,setMobile)}
             />
             <InputField
               fieldName="Password"
@@ -63,6 +69,8 @@ const LoginScreen = ({navigation}) => {
               textInputStyles={styles.textInputStyles}
               keyboardType="default"
               secureTextEntry={true}
+              value={password}
+              onChangeText={handleChangeText(e,setPassword)}
             />
             <AppButton title="Login " onPress={onPressLearnMore} />
             <TouchableOpacity
