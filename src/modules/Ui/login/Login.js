@@ -61,7 +61,9 @@ const LoginScreen = ({navigation}) => {
               textInputStyles={styles.textInputStyles}
               keyboardType="numeric"
               value={mobile}
-              onChangeText={handleChangeText(e,setMobile)}
+              onChangeText={(e)=>{
+                handleChangeText(e,setMobile
+              )}}
             />
             <InputField
               fieldName="Password"
@@ -70,7 +72,7 @@ const LoginScreen = ({navigation}) => {
               keyboardType="default"
               secureTextEntry={true}
               value={password}
-              onChangeText={handleChangeText(e,setPassword)}
+              onChangeText={(e)=>{handleChangeText(e,setPassword)}}
             />
             <AppButton title="Login " onPress={onPressLearnMore} />
             <TouchableOpacity
