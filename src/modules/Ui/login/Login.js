@@ -25,21 +25,22 @@ const heightImgFrame = Dimensions.get('window').height * 0.5;
 const widthImgFrame = Dimensions.get('window').width;
 
 const LoginScreen = ({navigation}) => {
-  const [mobile, setMobile] = useState(null);
-  const [password, setPassword] = useState(null);
+  const [mobile, setMobile] = useState('');
+  const [password, setPassword] = useState('');
   const globalState = useSelector(GlobalStatesData);
   const onPressLearnMore = () => {
     if (mobile && password) {
       navigation.navigate('Home');
     } else {
-      console.log(email, password);
-      alert('Please enter email and password');
+      console.log(mobile, password, 'azaan');
+      alert('Please enter mobile and password');
     }
   };
 
-  const handleChangeText = (inputValue,dispatch) => {
-    dispatch(inputValue)
-  }
+  const handleChangeText = (inputValue, dispatch) => {
+    console.log(inputValue);
+    dispatch(inputValue);
+  };
 
   const height = useHeaderHeight();
   console.log(globalState?.globalStatesSlice?.openState);
@@ -61,9 +62,9 @@ const LoginScreen = ({navigation}) => {
               textInputStyles={styles.textInputStyles}
               keyboardType="numeric"
               value={mobile}
-              onChangeText={(e)=>{
-                handleChangeText(e,setMobile
-              )}}
+              onChangeText={e => {
+                handleChangeText(e, setMobile);
+              }}
             />
             <InputField
               fieldName="Password"
@@ -72,7 +73,9 @@ const LoginScreen = ({navigation}) => {
               keyboardType="default"
               secureTextEntry={true}
               value={password}
-              onChangeText={(e)=>{handleChangeText(e,setPassword)}}
+              onChangeText={e => {
+                handleChangeText(e, setPassword);
+              }}
             />
             <AppButton title="Login " onPress={onPressLearnMore} />
             <TouchableOpacity
@@ -171,7 +174,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#414042',
     paddingLeft: 10,
-    marginBottom : 10
+    marginBottom: 10,
   },
 });
 
