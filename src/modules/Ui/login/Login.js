@@ -42,8 +42,8 @@ const LoginScreen = ({navigation}) => {
     dispatch(inputValue);
   };
 
-  const height = useHeaderHeight();
-  console.log(globalState?.globalStatesSlice?.openState);
+  // const height = useHeaderHeight();
+  // console.log(globalState?.globalStatesSlice?.openState);
   return (
     <>
       <KeyboardAvoidingView
