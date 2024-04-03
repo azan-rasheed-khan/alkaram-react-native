@@ -38,7 +38,7 @@ const LoginScreen = ({navigation}) => {
   };
 
   const handleChangeText = (inputValue, dispatch) => {
-    console.log(inputValue);
+    // console.log(inputValue);
     dispatch(inputValue);
   };
 
