@@ -38,12 +38,10 @@ const LoginScreen = ({navigation}) => {
   };
 
   const handleChangeText = (inputValue, dispatch) => {
-    // console.log(inputValue);
     dispatch(inputValue);
   };
 
   // const height = useHeaderHeight();
-  // console.log(globalState?.globalStatesSlice?.openState);
   return (
     <>
       <KeyboardAvoidingView
