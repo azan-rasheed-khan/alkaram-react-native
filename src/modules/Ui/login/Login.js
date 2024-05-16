@@ -41,7 +41,6 @@ const LoginScreen = ({navigation}) => {
     dispatch(inputValue);
   };
 
-  // const height = useHeaderHeight();
   return (
     <>
       <KeyboardAvoidingView
