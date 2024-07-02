@@ -74,6 +74,9 @@ const LoginScreen = ({navigation}) => {
                 handleChangeText(e, setPassword);
               }}
             />
+            <View style={styles}>
+              <Text>Forgot PIN Code</Text>
+            </View>
             <AppButton title="Login " onPress={onPressLearnMore} />
             <TouchableOpacity
               onPress={() => {
@@ -168,11 +171,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F5F5',
     borderRadius: 10,
     borderStyle: 'solid',
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: '#414042',
     paddingLeft: 10,
     marginBottom: 10,
   },
+  forgotTextView : {
+    flex : 1,
+    justifyContent : 'flex-end',
+    alignItems : 'flex-end',
+    width : '100%'
+  }
 });
 
 export default LoginScreen;
