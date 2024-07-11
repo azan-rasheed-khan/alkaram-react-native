@@ -5,10 +5,7 @@ import {
   StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
-  Image,
-  TextInput,
 } from 'react-native';
 
 const NavBar = () => {
