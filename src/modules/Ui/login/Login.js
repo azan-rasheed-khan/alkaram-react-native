@@ -159,7 +159,6 @@ const styles = StyleSheet.create({
     padding: 25,
   },
   loginTextHeading: {
-    // flex : 1,
     width: '100%',
     textAlign: 'center',
     fontSize: 30,
