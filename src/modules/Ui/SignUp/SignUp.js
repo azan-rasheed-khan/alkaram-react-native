@@ -81,7 +81,6 @@ const styles = StyleSheet.create({
     },
     signUpParent : {
         flex : 1,
-        // backgroundColor : 'yellow'
         paddingLeft : 30,
     },
     loginHeading : {
@@ -100,7 +99,6 @@ const styles = StyleSheet.create({
         height : 45,
         width : 300,
         backgroundColor : 'white',
-        // borderWidth: 1,
         borderRadius : 5,
         padding : 10,
         shadowColor: '#000',
